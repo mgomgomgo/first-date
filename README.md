@@ -8,9 +8,9 @@ Your AI may be incredibly capable. But if it doesn't understand how you think, c
 
 ## Start with the actual protocol
 
-**First Date is a structured discovery protocol, not a generic "get to know me" prompt.** It uses ten specific discovery domains, thoughtful follow-ups, checkpoints, and a practical exercise to test whether your AI actually understands how to collaborate with you.
+**First Date is a structured discovery protocol, not a generic "get to know me" prompt.** It has specific discovery questions, optional mapping of your current world, and a practical exercise to test whether your AI actually understands how to collaborate with you. It deepens over time, rather than ending after an interview.
 
-**[Read the complete discovery protocol](protocols/discovery.md)** to see the exact questions and flow.
+**Explore the three stages:** [Who I am](protocols/discovery.md) · [My world](protocols/world.md) · [Growing together](protocols/growth.md).
 
 ### First Date, after installation
 
@@ -24,13 +24,13 @@ Or use the [explicit invocation prompt](prompts/first-date.txt), which requires 
 
 ### Want to preview it without installing?
 
-Open [the discovery protocol](protocols/discovery.md) and copy its **entire contents** into your AI, followed by: `Run First Date using the protocol above.`
+Open [Stage 1 discovery](protocols/discovery.md), copy its **entire contents** into your AI, then say: `Run Stage 1 using the supplied protocol.` You may also provide [Stage 2](protocols/world.md) and [Stage 3](protocols/growth.md) for deeper testing.
 
 This is a **manual demonstration** of the same structured interview, but it doesn't install persistent behavior or guarantee memory across sessions. We are improving packaging to make the full experience easier to install.
 
 ### Already have a relationship with your AI?
 
-Install the skill and say `Run First Date check-in`. The protocol checks existing context for unverified assumptions, identifies the least-understood relevant domains, and calibrates against a real working example. It does not need to reinterview you from scratch.
+Install the skill and say `Run First Date check-in`. The [Growing Together protocol](protocols/growth.md) reviews accessible context, important gaps, changing situations and prior decisions, then calibrates against a real example. It does not need to reinterview you from scratch.
 
 ## What makes it different?
 
@@ -40,7 +40,8 @@ Most AI onboarding focuses on the task. First Date focuses on the person behind 
 - **Global context first.** What the AI learns about you should be reusable across relevant work where your AI supports it.
 - **Project-specific context when needed.** Projects should inherit only the minimum approved information.
 - **User-owned and inspectable.** Review, correct, withhold, or export your context.
-- **Evolving, not one-and-done.** Future check-ins help correct stale assumptions and deepen understanding.
+- **Evolving, not one-and-done.** User-approved corrections, decisions, and outcomes improve collaboration over time.
+- **World-aware, not just preference-aware.** Optional understanding of initiatives, relationships, roles and prior attempts helps avoid generic advice.
 
 > Understand before assuming. Learn without intruding. Remember with permission. Evolve through experience.
 
@@ -73,11 +74,11 @@ Installation, invocation, and persistent memory are host-specific. See [SKILL.md
 
 ## Want the ongoing experience?
 
-The manual protocol preview can demonstrate the conversation, but does not install ongoing behavior. The [full skill](SKILL.md) adds structured workflows for onboarding, project context, check-ins, audits, and exports, plus guidance for optional context clarification during normal collaboration *when your AI platform loads the skill*.
+The manual protocol preview demonstrates a stage, but does not install ongoing behavior. The [full skill](SKILL.md) adds structured workflows for onboarding, project context, check-ins, audits, and exports, plus guidance for optional context clarification during normal collaboration *when your AI platform loads the skill*.
 
 | Approach | Best for | What to expect |
 | --- | --- | --- |
-| **Copy the full discovery protocol** | Anyone evaluating the conversation style | Structured manual demo; no installed behavior or persistence guarantee |
+| **Copy the full protocol stage** | Anyone evaluating the experience | Structured manual demo; no installed behavior or persistence guarantee |
 | **Install the skill** | People who want repeated use | Host-supported skill invocation and maintenance workflows; storage still depends on the platform |
 | **Use the templates** | People who want full control of their data | Portable Markdown for [global context](templates/global-context.md) and [project context](templates/project-context.md) |
 
@@ -95,12 +96,17 @@ See the [skill instructions](SKILL.md) for the full protocol. Native slash comma
 
 - [Protocol specification](SPEC.md)
 - [Full skill](SKILL.md)
-- [Required discovery questions and calibration](protocols/discovery.md)
+- [Stage 1: discovery questions and calibration](protocols/discovery.md)
+- [Stage 2: understanding the user's world](protocols/world.md)
+- [Stage 3: growing together](protocols/growth.md)
+- [Manual acceptance scenarios](tests/manual-scenarios.md)
 - [Installed skill invocation prompt](prompts/first-date.txt)
 - [Global profile template](templates/global-context.md)
 - [Project profile template](templates/project-context.md)
+- [Private World Map template](templates/world-context.md)
+- [Private decision-log template](templates/decision-log.md)
 - [Contributing](CONTRIBUTING.md)
 
-**Status:** v0.1 early prototype. We're validating the conversational experience and cross-platform behavior. Feedback and real-world testing (without sharing personal profiles) are welcome.
+**Status:** v0.2 design iteration (not yet a validated public release). We're validating the conversational experience and cross-platform behavior. Feedback and real-world testing (without sharing personal profiles) are welcome.
 
 MIT licensed. See [LICENSE](LICENSE).
