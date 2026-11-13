@@ -6,6 +6,18 @@ Your AI may be incredibly capable. But if it doesn't understand how you think, c
 
 **First Date helps your AI get to know you, through a conversation rather than a questionnaire.** No coding required.
 
+## Install the real First Date skill
+
+**[Download the First Date skill ZIP](https://github.com/mgomgomgo/first-date/releases/download/v0.2.0-pretest.1/first-date.zip)**
+
+1. Download `first-date.zip` from the link above.
+2. In personal Claude, open **Customize → Skills → + → Create skill → Upload a skill**.
+3. Upload that ZIP, enable the skill, then say: **Run First Date.**
+
+That's the complete protocol, including the specific discovery questions, the optional World Map and the learning loop. You do **not** have to copy a prompt or organize files into folders. [Other installation methods and troubleshooting](INSTALL.md).
+
+**Pre-test package:** The ZIP is published by automated GitHub validation and has not yet been tested in your personal Claude. Skills also require the relevant Claude account features and do not guarantee persistent personal memory.
+
 ## Start with the actual protocol
 
 **First Date is a structured discovery protocol, not a generic "get to know me" prompt.** It has specific discovery questions, optional mapping of your current world, and a practical exercise to test whether your AI actually understands how to collaborate with you. It deepens over time, rather than ending after an interview.
@@ -107,6 +119,6 @@ See the [skill instructions](SKILL.md) for the full protocol. Native slash comma
 - [Private decision-log template](templates/decision-log.md)
 - [Contributing](CONTRIBUTING.md)
 
-**Status:** v0.2 design iteration (not yet a validated public release). We're validating the conversational experience and cross-platform behavior. Feedback and real-world testing (without sharing personal profiles) are welcome.
+**Status:** v0.2 pre-test release. Packaging checks pass; live model and provider-memory behavior still require testing. We're validating the conversational experience and cross-platform behavior. Feedback and real-world testing (without sharing personal profiles) are welcome.
 
 MIT licensed. See [LICENSE](LICENSE).
