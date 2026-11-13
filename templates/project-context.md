@@ -18,7 +18,9 @@
 - Terminology:
 - Stakeholders and responsibilities:
 - Constraints:
-- Decisions already made:
+- Decisions already made (link to private decision log when relevant):
+- Prior attempts and outcomes:
+- What would justify reconsideration:
 - Open questions:
 
 ## Approved global-context inheritance
@@ -36,5 +38,7 @@
 
 ## Review and maintenance
 - Last check-in:
+- Next review date:
+- Superseded decisions:
 - Outdated or disputed information:
 - Proposed changes awaiting approval:
