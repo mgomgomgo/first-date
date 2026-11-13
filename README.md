@@ -6,7 +6,9 @@ Your AI may be incredibly capable. But if it doesn't understand how you think, c
 
 **First Date helps your AI get to know you, through a conversation rather than a questionnaire.** No coding required.
 
-## Start your First Date (no installation)
+## Quick preview (no installation, not the full skill)
+
+**This is a trial prompt, not the installed First Date protocol.** It cannot automatically load the repository's skill, maintain its full workflows, or guarantee persistence. Use it only to preview the conversation style. For the actual experience, follow **Install the full skill** below.
 
 **1.** Open [Claude](https://claude.ai/) or [ChatGPT](https://chatgpt.com/) in a new chat. Other conversational AIs may also work.
 
@@ -72,13 +74,40 @@ Most AI onboarding focuses on the task. First Date focuses on the person behind 
 
 > Understand before assuming. Learn without intruding. Remember with permission. Evolve through experience.
 
+## Install the full skill (recommended)
+
+This installs the **actual First Date protocol**, including its skill instructions and context templates, rather than just a standalone prompt.
+
+### Personal Claude (claude.ai)
+
+1. Download the packaged First Date skill ZIP from a project release **when published**. A release asset is not available yet; until then, create a ZIP containing a `first-date/` folder with [SKILL.md](SKILL.md) and the [templates](templates/) folder.
+2. In Claude, open **Customize → Skills → + → Create skill → Upload a skill**.
+3. Upload the ZIP and enable First Date.
+4. Start a chat and say: **"Run First Date."**
+
+Claude requires code execution to be enabled for Skills. Installation is persistent within Claude's supported skill settings, but this does not automatically guarantee durable storage of the resulting personal profile.
+
+### Claude Code / supported coding agents
+
+From your terminal (requires Node.js and the community skills CLI):
+
+```sh
+npx skills add mgomgomgo/first-date -g
+```
+
+Choose your agent when prompted. The `-g` flag installs globally rather than only in the current project. Confirm the agent discovers First Date after installation. This is a community installer, not a built-in feature of all chat apps.
+
+### Other AI tools
+
+Installation, invocation, and persistent memory are host-specific. See [SKILL.md](SKILL.md) for the portable protocol; do not assume every AI can automatically fetch or execute a GitHub repository.
+
 ## Want the ongoing experience?
 
 The zero-install prompt starts the conversation. The [full skill](SKILL.md) adds structured workflows for onboarding, project context, check-ins, audits, and exports, plus guidance for optional context clarification during normal collaboration *when your AI platform loads the skill*.
 
 | Approach | Best for | What to expect |
 | --- | --- | --- |
-| **Copy the prompt** | Anyone trying First Date | Immediate introduction; persistence depends on your AI tool |
+| **Copy the preview prompt** | Anyone evaluating the conversation style | Demo only: not the installed skill; persistence depends on the AI tool |
 | **Install the skill** | People who want repeated use | Host-supported skill invocation and maintenance workflows; storage still depends on the platform |
 | **Use the templates** | People who want full control of their data | Portable Markdown for [global context](templates/global-context.md) and [project context](templates/project-context.md) |
 
