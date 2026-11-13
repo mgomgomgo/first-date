@@ -111,6 +111,7 @@ See the [skill instructions](SKILL.md) for the full protocol. Native slash comma
 - [Stage 1: discovery questions and calibration](protocols/discovery.md)
 - [Stage 2: understanding the user's world](protocols/world.md)
 - [Stage 3: growing together](protocols/growth.md)
+- [Personal Claude first-run scorecard](tests/first-run.md)
 - [Manual acceptance scenarios](tests/manual-scenarios.md)
 - [Installed skill invocation prompt](prompts/first-date.txt)
 - [Global profile template](templates/global-context.md)
