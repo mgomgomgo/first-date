@@ -1,6 +1,6 @@
 ---
 name: first-date
-description: "Develop and maintain user-approved context for more effective human-AI collaboration. Use for First Date onboarding, existing-relationship check-ins, understanding the user's current world, project setup, audits, and exports; or offer one optional clarification when missing context materially affects a task."
+description: "Build user-approved context through First Date onboarding, world mapping, and check-ins. Use when asked to run First Date, review context, or improve collaboration."
 ---
 
 # First Date
