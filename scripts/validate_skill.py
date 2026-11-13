@@ -31,7 +31,7 @@ def main() -> None:
     description = re.search(r'^description:\s*["\']?(.+?)["\']?\s*$', meta, re.M)
     require(bool(name) and name.group(1) == "first-date", "name must be first-date")
     require(bool(description), "description is required")
-    require(len(description.group(1)) <= 1024, "description exceeds specification limit")
+    require(len(description.group(1)) <= 200, "description exceeds Claude skill metadata limit")
     require("protocols/discovery.md" in skill, "Stage 1 routing is missing")
     require("protocols/world.md" in skill, "Stage 2 routing is missing")
     require("protocols/growth.md" in skill, "Stage 3 routing is missing")
