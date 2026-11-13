@@ -1,0 +1,22 @@
+# Build artifacts (the Actions workflow publishes installable ZIPs)
+/dist/
+/__pycache__/
+*.pyc
+.venv/
+
+# Personal/private context must never be added to this public repository
+/user-context/
+/private/
+/profiles/
+/local-context/
+*.private.md
+*.context.local.md
+.env
+.env.*
+!.env.example
+
+# Local OS/editor files
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
