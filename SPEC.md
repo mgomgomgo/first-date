@@ -1,7 +1,7 @@
 # First Date — Product & Protocol Specification
 
 **Status:** Draft for community review  
-**Version:** 0.1.0  
+**Version:** 0.2.0 (design iteration)  
 **Tagline:** **AI can only multiply what it understands.**  
 **License:** MIT
 
@@ -43,6 +43,18 @@ First Date prioritizes **relevant, trustworthy, permissioned context**.
 
 ## 4. Architecture
 
+### Three complementary dimensions
+
+1. **Who I am:** user-approved formative lessons, values, reasoning patterns, communication, and collaboration preferences.
+2. **What's happening in my world:** relevant roles, relationships, active efforts, competing constraints, decisions and prior attempts. Optional, progressive, private by default.
+3. **How we grow together:** user-approved corrections, outcomes, dated decision updates, and check-ins during supported active interactions, never assumed background monitoring.
+
+### Time and evidence
+
+Mark context stable, active, historical, or session-only. Distinguish user-explicit facts, confirmed synthesis, and tentative inferences. Use review dates and supersession status for changing context; avoid broad copies of raw transcripts.
+
+
+
 Three context scopes:
 
 | Scope | Purpose | Lifetime |
@@ -63,17 +75,25 @@ Two operating modes:
 ### 5.1 Introduction: `first-date`
 Follow the **required ten-domain discovery playbook** in [protocols/discovery.md](protocols/discovery.md), including explicit anchor questions, diagnostic probes, reflection checkpoints, and a user-chosen practical calibration exercise. One question at a time; do not force all domains when the user stops or skips. Produce a draft global profile; ask for explicit approval before any durable write.
 
-### 5.2 Check-in: `first-date check-in`
+### 5.2 World: first-date world
+
+Follow [protocols/world.md](protocols/world.md) with user permission. Explore roles, initiatives, current constraints, minimal relevant collaborator context, and prior attempts. Create a private World Map and decision records. No mandatory biography.
+
+### 5.3 Check-in: `first-date check-in`
 Review confirmed context, tentative assumptions, outdated items, and unknowns. Suggest a small, inspectable change set. Never claim a write before it succeeds.
 
-### 5.3 Project: `first-date project`
+### 5.4 Project: `first-date project`
 Discover objective, stakeholders, terminology, working conventions, constraints, and success criteria. Ask before importing global details into a project. Keep private details private.
 
-### 5.4 Audit: `first-date audit`
+### 5.5 Audit: `first-date audit`
 Find contradictions, irrelevant entries, unsupported inferences, stale items, and oversharing. Present proposed fixes for review.
 
-### 5.5 Export: `first-date export`
+### 5.6 Export: `first-date export`
 Produce the minimum useful portable context. Preview, redact, and confirm destination. Never silently export private user data.
+
+### 5.7 Growing Together
+
+Follow [protocols/growth.md](protocols/growth.md) when the skill is available during active work. Detect explicit corrections, changed decisions, prior attempts, and successful outcomes; classify them, propose minimal context updates, ask for approval and verify persistence. Do not convert temporary emotions or third-party claims into lasting traits.
 
 ## 6. Data quality and consent
 
@@ -104,14 +124,18 @@ first-date/
 ├── SPEC.md
 ├── SKILL.md
 ├── protocols/
-│   └── discovery.md
+│   ├── discovery.md
+│   ├── world.md
+│   └── growth.md
 ├── prompts/
 │   └── first-date.txt
 ├── LICENSE
 ├── CONTRIBUTING.md
 └── templates/
     ├── global-context.md
-    └── project-context.md
+    ├── project-context.md
+    ├── world-context.md
+    └── decision-log.md
 ```
 
 Host adapters may be added later under `adapters/`. Public template files are not actual user context. A compatible host can install the skill and choose an appropriate **private** user-owned location for real profiles.
@@ -132,6 +156,13 @@ Host adapters may be added later under `adapters/`. Public template files are no
 12. The skill never falsely claims background monitoring, automatic invocation, or successful persistence.
 13. The assistant performs a user-approved real-work calibration exercise to verify its understanding.
 14. The assistant can distinguish actionable collaboration instructions from vague personality summaries.
+15. World mapping is optional and avoids pressuring sensitive disclosure.
+16. Prior attempts and decisions include dated rationale, outcomes, and supersession status when relevant.
+17. User corrections trigger proposed, not automatic, context updates.
+18. Temporary circumstances and third-party reports are not treated as personal traits.
+19. Project inheritance is limited and explicitly permitted.
+20. Existing-relationship check-ins propose change-only updates.
+21. Manual scenarios in [tests/manual-scenarios.md](tests/manual-scenarios.md) are used to evaluate protocol fidelity.
 
 ## 10. Release plan
 
