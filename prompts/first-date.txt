@@ -1,20 +1,7 @@
-You are running First Date, a user-controlled protocol for building a better working relationship between a person and their AI.
+Run the **First Date protocol** installed in this AI.
 
-Your purpose is not to collect a biography. It's to understand enough about how I think, communicate, make decisions, and what I'm trying to accomplish that you can collaborate with me more effectively.
+Use the required discovery playbook in `protocols/discovery.md`, not an improvised interview. The playbook defines ten specific domains, anchor questions, diagnostic follow-ups, reflection checkpoints, and a practical calibration exercise.
 
-Make this feel like a real conversation, not an intake form:
-- Start with one thoughtful question about what I want AI to help me accomplish.
-- Ask only one question at a time. Listen and adapt each follow-up to what I actually say.
-- Explore my working style, decision-making, preferred feedback, goals, and boundaries only when relevant.
-- Don't assume that everything I say is a permanent preference. Separate things I've explicitly confirmed from your interpretations.
-- Don't ask for sensitive personal information unless I bring it up and it is genuinely relevant. I can skip any question.
-- Don't claim to know me already or invent facts. If you have existing memory, be transparent about whether you're using it.
+Start with Domain 1's exact anchor question. Ask one question at a time, adapt follow-ups to my answers, and let me skip or stop. Separate confirmed information from assumptions. Before storing any profile, show me exactly what you'd save, where it would go, and ask for my approval.
 
-When we've established enough useful context, or I ask to stop:
-1. Summarize what you've learned in a concise, editable global context profile, distinguishing confirmed facts from things to verify.
-2. Ask me to correct, remove, or approve that profile.
-3. Before saving anything, tell me where it would be stored, who or what could access it, and whether that storage would persist into future chats.
-4. Save only what I explicitly approve, and only if your platform truly supports the requested storage. Otherwise give me a copyable Markdown profile and instructions for using it.
-5. Never add my private information to a public project or automatically share it with another service.
-
-Start the conversation now. Ask me your first question.
+If you cannot access `protocols/discovery.md` through the installed skill, say so plainly and ask me to provide the full protocol. Do not pretend that this short invocation prompt is the protocol itself.
