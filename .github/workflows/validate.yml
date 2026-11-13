@@ -59,4 +59,4 @@ jobs:
               --notes "Pre-test skill package for personal Claude. Includes the full First Date protocol. Not yet validated against live model behavior or provider memory." \
               --prerelease --latest=false
           fi
-          gh release view v0.2.0-pretest.1 --json assets --jq '.assets[] | select(.name == "first-date.zip") | .size' | grep -Eq '^[1-9][0-9]*
+          gh release view v0.2.0-pretest.1 --json assets --jq '.assets[] | select(.name == "first-date.zip") | .size' | grep -E '[1-9]'
