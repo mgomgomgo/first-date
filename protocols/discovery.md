@@ -1,19 +1,21 @@
 # First Date Discovery Protocol
 
-This is the **required discovery playbook**, not an optional list of topics. The model may adapt wording to the user, but MUST preserve coverage, probing intent, and validation. Do not improvise a generic interview.
+This is the **required Stage 1 discovery playbook**, not an optional list of topics. The model may adapt wording to the user but MUST use the anchor questions, probing intent and validation for relevant domains. **The ten domains are a map, not a required ten-question sitting.** Proceed progressively, offer early stopping and a provisional profile, and use [world.md](world.md) and [growth.md](growth.md) for situational context and learning through work.
 
 ## Operating cadence
 
 - Start with a short explanation, obtain agreement to proceed, and ask **one question per turn**. Never display the full bank as a questionnaire.
-- Follow the sequence below unless the user has already answered a topic. Skip duplicates; verify uncertain answers.
+- Follow the sequence below **as relevant to the user's goals**, unless the user has already answered a topic. Skip duplicates; verify uncertain answers. Aim for a useful initial foundation, not full coverage in one sitting.
 - Each domain has an **anchor question**, a **diagnostic follow-up**, and an **observable output**. Ask at least the anchor; probe with the diagnostic when the first answer lacks detail. If already clear, advance.
 - Use the user's own examples and language. Never manufacture emotional closeness or assert you understand them after one answer.
-- After domains 3, 6, and 9, briefly reflect what you've learned, identify one tentative inference, and invite correction.
-- Offer a checkpoint after 4-6 questions and at each reflection: continue, pause, skip a domain, or generate a provisional profile. A user can end at any point.
+- After domains 3, 6, and 9 **if reached**, briefly reflect what you've learned, identify one tentative inference, and invite correction.
+- Offer a checkpoint after 4-6 questions and at each reflection: continue, pause, skip a domain, **move to a relevant real-world example**, or generate a provisional profile. A user can end at any point. Aim to understand a small number of important dimensions deeply before expanding.
 - Do not ask for sensitive identity, family, medical, political, religious, financial or intimate details by default. If volunteered, ask whether it should remain session-only; never infer sensitive attributes.
 - If the AI already has stored context, ask whether to use it; honor a fresh-start choice to the extent supported and disclose inability to isolate memory if applicable.
 
 ## Phase I: Discover the person behind the prompts
+
+Capture the user's **reasons** and illustrative experiences, not just preferences. If an answer mentions a meaningful lesson or change of mind, ask what made it important, without pressuring a personal disclosure.
 
 ### Domain 1 — What they're trying to multiply
 **Anchor:** "Think of a moment when you wished you had someone who could help you think, decide, create, or get something done. What were you trying to accomplish?"
@@ -76,6 +78,12 @@ This is the **required discovery playbook**, not an optional list of topics. The
 **Capture:** Private/no-retain items, permissible global vs project context, permission preferences, data sharing limitations.
 **Avoid:** Asking users to reveal the sensitive information they're trying to protect.
 
+## Stage 2 is optional and progressive
+
+After a useful initial set of answers, offer: "Would you like to map a few current projects, relationships, or situations so I can apply what I've learned, or stop with this foundation?" If the user opts in, read and follow [world.md](world.md). Do not treat biography, relationships or ongoing hardships as mandatory onboarding data.
+
+For decision history, prior attempts, competing roles, relevant people, and listening-versus-solving signals, **use Stage 2**. For ongoing corrections and outcomes, **use Stage 3** in [growth.md](growth.md).
+
 ## Phase IV: Prove understanding rather than merely collect facts
 
 ### Calibration exercise (required unless user declines)
@@ -83,7 +91,7 @@ Ask for **one real, low-stakes scenario** relevant to their stated use case:
 "Could you give me a small example of something you'd actually ask your AI to help with? I'll show how I'd approach it using what I've learned, and you can tell me what feels right or wrong."
 
 - Respond to the example using the discovered preferences, but **do not invent context**.
-- Explain briefly which confirmed preferences influenced your approach.
+- Explain briefly which **confirmed preferences and relevant world context** influenced your approach, **which facts were missing**, and what new information could change the result.
 - Ask: "What would you change about how I handled that?"
 - Update the draft based on the correction. A corrected behavior is stronger evidence than a broad self-description.
 
