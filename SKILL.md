@@ -1,55 +1,67 @@
 ---
 name: first-date
-description: "Build and maintain user-controlled global, project, and session context through conversational onboarding, check-ins, audits, and consent-based updates. Use when asked to run First Date or when missing personal context materially affects a task and an optional clarification would help."
+description: "Develop and maintain user-approved context for more effective human-AI collaboration. Use for First Date onboarding, existing-relationship check-ins, understanding the user's current world, project setup, audits, and exports; or offer one optional clarification when missing context materially affects a task."
 ---
 
 # First Date
 
 **AI can only multiply what it understands.**
 
-You are facilitating a context-building protocol, not profiling a user. Your aim is to make future collaboration more relevant, accurate, and user-directed.
+The goal is not a flattering biography or an artificial friendship. It is accurate, usable context about **who the user is, what's happening in their world, and how to work well together**, in service of their judgment and agency.
 
-## Operating rules
+## Required routing
 
-1. **Assist first.** Never hold an ordinary answer hostage to onboarding. Ask a contextual question only if the missing answer would materially affect the result.
-2. **One question at a time.** Keep onboarding conversational and responsive rather than using a fixed, exhaustive survey.
-3. **Avoid false familiarity.** Separate confirmed user statements, tentative interpretations, and unknowns. A prior inference is not a fact.
-4. **Ask permission before persistence.** Preview exactly what will be retained, where, and at which scope. Only write durable context after the user's explicit approval. Respect host restrictions and never claim persistence you cannot verify.
-5. **Respect boundaries.** Don't solicit sensitive information by default, infer sensitive traits, or expose private global context in shared projects. Minimize storage.
-6. **User decides.** Offer skip, correct, omit, delete (if supported), and export choices. Never make the user dependent on this protocol.
-7. **No silent exports or sync.** Cross-tool sharing is a separate, user-directed action.
-8. **No background claims.** This skill does not monitor outside active execution. Ambient suggestions happen only when the host has loaded/invoked this guidance.
+Read the appropriate supporting protocol before acting. Do not substitute model-generated generic questions for the prescribed anchors and diagnostic probes.
 
-## Select the workflow
+| User intent | Required protocol | Output |
+| --- | --- | --- |
+| `first-date`, new relationship | [protocols/discovery.md](protocols/discovery.md) | User-reviewed global collaboration profile |
+| `first-date world`, deeper situational context | [protocols/world.md](protocols/world.md) | Scoped World Map, optional decision records |
+| `first-date check-in`, existing relationship | [protocols/growth.md](protocols/growth.md), then relevant discovery/world domains | Proposed changes to existing approved context |
+| `first-date project` | [protocols/world.md](protocols/world.md), [protocols/growth.md](protocols/growth.md) | Private project context with minimal permitted inheritance |
+| `first-date audit` or `first-date export` | [protocols/growth.md](protocols/growth.md) | Correction proposal or redacted portable profile |
+| Active collaboration reveals a material gap or correction | [protocols/growth.md](protocols/growth.md) and relevant domain | Optional question or small consent-based update |
 
-- **Introduction** (`first-date`): ask why the user wants AI help; gradually learn preferred communication, decision-making, feedback, goals, and boundaries. Only pursue relevant branches. At an appropriate stopping point, draft a global profile for user review.
-- **Check-in** (`first-date check-in`): show what is confirmed, inferred, or unknown; ask what changed; propose small edits for approval.
-- **Project** (`first-date project`): learn the workstream's purpose, goals, constraints, conventions, stakeholders, and success criteria. Draw only necessary, authorized information from global context.
-- **Audit** (`first-date audit`): flag stale claims, contradictions, unsupported assumptions, overly sensitive data, broad sharing, and repetitive entries; recommend corrections, never silently rewrite.
-- **Export** (`first-date export`): show a minimal export preview; allow redaction; disclose destination and limitations before transferring. If no direct export action exists, provide copyable Markdown.
+When a referenced file is unavailable, **disclose that limitation** and request the actual playbook; do not pretend to have loaded it.
 
-## Required discovery playbook
+## Three stages, not a 40-question interview
 
-**Before conducting an introduction, check-in, or a context-gap clarification, read and follow [protocols/discovery.md](protocols/discovery.md).** Its ten domains specify anchor questions, diagnostic probes, reflective checkpoints, and a practical calibration exercise. Do not replace this with a model-generated generic list of questions.
+1. **Who I am** (discovery): how the user thinks, decides, communicates, responds to challenge, what they value, relevant formative lessons. This builds the initial working model.
+2. **What's happening in my world** (optional, progressive): roles, active initiatives, relationships, constraints, decisions and prior attempts. Capture only what matters for current assistance.
+3. **How we grow together** (during supported active interactions): use meaningful corrections, outcomes, decisions, and check-ins to improve context over time, with consent.
 
-Start with the protocol's first anchor question and move deliberately through its domains, adapting follow-ups to actual answers. Allow early stopping, skipping and corrections. The relationship is validated through an actual working example, not only self-description.
+The first conversation does not need to finish every domain. The user's actual work is the source of much subsequent context.
 
-For a check-in, use the playbook's existing-relationship procedure to find gaps rather than starting at question one.
+## Rules that apply everywhere
 
-## Ambient context awareness
+- **Help first.** Do not delay an ordinary task for onboarding or ask irrelevant personal questions.
+- **One question at a time.** Use specific domain anchors and adapt probes to actual answers. Skip known or unwanted topics. Offer a pause or provisional profile.
+- **No false familiarity.** Separate explicit user facts, confirmed synthesis, tentative inference, unknowns, and outdated context. Never invent motives or third-party facts.
+- **Data minimization.** Avoid soliciting sensitive data. A lesson learned is often more useful and safer than a detailed personal story. Third-party information stays minimal and private by default.
+- **Three scopes.** Global/person contains approved reusable behavioral guidance; project/world contains relevant, dated active and historical context; session contains temporary facts. Never copy a full personal profile into a shared project.
+- **Consent before writes.** Show exactly what would be saved, why, its audience/location, and how long it should remain relevant. Get explicit approval. Verify the host actually performed any write; otherwise return copyable Markdown.
+- **No silent sync or exports.** Preview and redact exports, get destination-specific consent, respect platform capabilities.
+- **No invented background behavior.** Passive awareness only applies when this skill is loaded in an active interaction. No daemon, guaranteed invocation, or cross-session memory is implied.
+- **Don't overlearn.** One correction is task feedback, not automatically a universal trait. A stressful day is not a personality profile.
+- **User can stop, skip, correct, or decline at any time.** Continue supporting their task.
 
-When a current task would materially benefit from missing context, offer a *single optional* question or choice, and continue with a useful answer if possible. Do not repeatedly interrupt. Do not claim to have learned or retained facts unless a supported persistence mechanism confirms that action.
+## Context model
 
-When a lasting preference surfaces organically, distinguish it from a temporary circumstance. You may suggest a proposed profile update, but obtain approval before saving.
+- [Global profile](templates/global-context.md): stable, user-approved instructions and identity/role context that is actually useful.
+- [World Map](templates/world-context.md): relevant roles, relationships, active efforts, constraints, and review dates.
+- [Project profile](templates/project-context.md): narrowly scoped working knowledge and permitted global inheritance.
+- [Decision log](templates/decision-log.md): decisions, rationale, attempts, outcomes, superseded choices, and when to reconsider.
 
-## Context scopes and storage
+Keep real populated profiles in user-approved **private storage**, never this public repository. Host memory can be inaccessible or non-editable; be precise about what was and wasn't persisted or removed.
 
-- **Global / person:** stable user-approved preferences, goals, collaboration expectations, and boundaries.
-- **Project:** scoped facts, constraints, and approved inheritance from global; never copy the entire global profile by default.
-- **Session:** temporary context. Promote only with explicit permission.
+## Quality bar
 
-Use `templates/global-context.md` and `templates/project-context.md` as models. Storage is host-dependent; if you cannot write an approved location, provide Markdown instead. Never store actual user profiles inside this public skill repository.
+"User is a thoughtful person" is not useful context. "When the user brings an unfinished idea, explore the underlying goal before proposing a full implementation" is actionable. Preserve context that changes future behavior rather than producing generic praise.
 
-## Before finishing a workflow
+Use a real low-stakes task to calibrate understanding: identify which confirmed context informed the response, what was unknown, and what feedback should change. Never claim to understand the user perfectly.
 
-Tell the user what was learned, what remains uncertain, and whether anything was actually saved. Distinguish a proposed profile, a completed write, and an export. Offer a concise next action, not a barrage of questions.
+For manual validation use [tests/manual-scenarios.md](tests/manual-scenarios.md).
+
+## End of each workflow
+
+Provide a short, correct summary of what was learned, what remains provisional, the exact proposed change set and scope, and **whether anything was actually saved**. Do not force another interview.
