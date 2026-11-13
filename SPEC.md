@@ -61,7 +61,7 @@ Two operating modes:
 ## 5. Core workflows
 
 ### 5.1 Introduction: `first-date`
-Start with the user's desired outcomes. Explore communication style, decision-making, goals, boundaries, and feedback preferences as relevant. One question at a time. Produce a draft global profile; ask for explicit approval before any durable write.
+Follow the **required ten-domain discovery playbook** in [protocols/discovery.md](protocols/discovery.md), including explicit anchor questions, diagnostic probes, reflection checkpoints, and a user-chosen practical calibration exercise. One question at a time; do not force all domains when the user stops or skips. Produce a draft global profile; ask for explicit approval before any durable write.
 
 ### 5.2 Check-in: `first-date check-in`
 Review confirmed context, tentative assumptions, outdated items, and unknowns. Suggest a small, inspectable change set. Never claim a write before it succeeds.
@@ -103,6 +103,10 @@ first-date/
 ├── README.md
 ├── SPEC.md
 ├── SKILL.md
+├── protocols/
+│   └── discovery.md
+├── prompts/
+│   └── first-date.txt
 ├── LICENSE
 ├── CONTRIBUTING.md
 └── templates/
@@ -115,7 +119,7 @@ Host adapters may be added later under `adapters/`. Public template files are no
 ## 9. Acceptance criteria for v0.1
 
 1. A user can start an introduction with natural language.
-2. The assistant asks one relevant question at a time.
+2. The assistant uses the specified discovery domains, anchor questions, and diagnostic probes, one question at a time.
 3. Users can skip any question and continue receiving assistance.
 4. The assistant produces a concise, editable global-profile draft.
 5. No durable change occurs without explicit user approval.
@@ -126,6 +130,8 @@ Host adapters may be added later under `adapters/`. Public template files are no
 10. An export is previewable and user-directed.
 11. On unsupported hosts, useful copyable Markdown is provided.
 12. The skill never falsely claims background monitoring, automatic invocation, or successful persistence.
+13. The assistant performs a user-approved real-work calibration exercise to verify its understanding.
+14. The assistant can distinguish actionable collaboration instructions from vague personality summaries.
 
 ## 10. Release plan
 
