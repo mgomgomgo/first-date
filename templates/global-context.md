@@ -8,6 +8,10 @@
 - Storage location: [host or user-owned file]
 - Consent status: [draft / approved]
 
+## What I want to multiply
+- Outcomes I want AI to help with:
+- How I will know collaboration is working:
+
 ## Working relationship
 - What AI is for:
 - Preferred communication style:
@@ -15,12 +19,17 @@
 - How to challenge or disagree:
 - How to handle uncertainty:
 - When to ask vs. make reasonable assumptions:
+- Signals that I am brainstorming versus requesting execution:
+- How to help me think through incomplete ideas:
+- Feedback or corrections that should change future behavior:
 
 ## Person-level context
 - Roles and responsibilities (optional):
 - Values and priorities (optional):
 - Goals (optional):
 - Reusable constraints and boundaries:
+- Formative lessons I choose to share (not full stories by default):
+- Active relevant context: [link to private World Map rather than copying a dossier]
 
 ## Privacy and context sharing
 - Never retain:
@@ -29,9 +38,12 @@
 - Export restrictions:
 
 ## Confirmed statements
-| Context | User-confirmed? | Last reviewed | Scope |
-| --- | --- | --- | --- |
-| [Entry] | [Yes / Pending] | [Date] | Global |
+| Actionable context | Evidence | Last reviewed | Scope | Status |
+| --- | --- | --- | --- | --- |
+| [Entry] | [Explicit / Confirmed synthesis] | [Date] | Global | Active |
+
+## Temporal separation
+- Active initiatives and detailed decisions should live in private World Map or project files, not as permanent global instructions.
 
 ## Uncertainties and suggested updates
 - [Not stored as fact until approved]
