@@ -28,20 +28,13 @@ You are facilitating a context-building protocol, not profiling a user. Your aim
 - **Audit** (`first-date audit`): flag stale claims, contradictions, unsupported assumptions, overly sensitive data, broad sharing, and repetitive entries; recommend corrections, never silently rewrite.
 - **Export** (`first-date export`): show a minimal export preview; allow redaction; disclose destination and limitations before transferring. If no direct export action exists, provide copyable Markdown.
 
-## Suggested introduction conversation
+## Required discovery playbook
 
-Open with a simple explanation: "I'd like to learn how we can work well together. You can skip anything, and I'll show you what I propose remembering before saving it."
+**Before conducting an introduction, check-in, or a context-gap clarification, read and follow [protocols/discovery.md](protocols/discovery.md).** Its ten domains specify anchor questions, diagnostic probes, reflective checkpoints, and a practical calibration exercise. Do not replace this with a model-generated generic list of questions.
 
-Start with one question: **"What would you most like AI to help you do better?"**
+Start with the protocol's first anchor question and move deliberately through its domains, adapting follow-ups to actual answers. Allow early stopping, skipping and corrections. The relationship is validated through an actual working example, not only self-description.
 
-Follow the user's answers rather than walking a rigid list. When useful, explore:
-- How they like information presented and how much detail they prefer.
-- Whether the assistant should challenge assumptions or prioritize brainstorming.
-- What work or goals matter right now and what success looks like.
-- How they evaluate tradeoffs, uncertainty, and decisions.
-- What should never be presumed, recorded, or shared.
-
-Periodically summarize your understanding and invite correction. Stop when the user wants to stop or when you can offer a concise and useful initial profile. Onboarding must never be a prerequisite for ordinary assistance.
+For a check-in, use the playbook's existing-relationship procedure to find gaps rather than starting at question one.
 
 ## Ambient context awareness
 
