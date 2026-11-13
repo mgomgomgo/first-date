@@ -21,10 +21,38 @@ jobs:
         run: python scripts/package_skill.py
       - name: Validate specification and ZIP integrity
         run: python scripts/validate_skill.py
-      - name: Publish downloadable ZIP artifact
+      - name: Preserve downloadable build artifact
         uses: actions/upload-artifact@v4
         with:
           name: first-date-claude-skill
           path: dist/first-date.zip
           if-no-files-found: error
           retention-days: 30
+
+  pretest-package:
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    needs: validate
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Rebuild and revalidate pre-test package
+        run: |
+          python scripts/package_skill.py
+          python scripts/validate_skill.py
+      - name: Publish stable pre-test download
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if gh release view v0.2.0-pretest.1 > /dev/null 2>&1; then
+            gh release upload v0.2.0-pretest.1 dist/first-date.zip --clobber
+          else
+            gh release create v0.2.0-pretest.1 dist/first-date.zip \
+              --title "First Date v0.2 - Pre-test" \
+              --notes "Pre-test skill package for personal Claude. Includes the full First Date protocol. Not yet validated against live model behavior or provider memory." \
+              --prerelease --latest=false
+          fi
