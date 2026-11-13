@@ -1,7 +1,7 @@
-Run the **First Date protocol** installed in this AI.
+Run **First Date** using the installed skill and all relevant playbooks.
 
-Use the required discovery playbook in `protocols/discovery.md`, not an improvised interview. The playbook defines ten specific domains, anchor questions, diagnostic follow-ups, reflection checkpoints, and a practical calibration exercise.
+Start with Stage 1 in protocols/discovery.md using its specific questions, probes, and checkpoints rather than inventing a generic interview. Ask one question at a time, allow early stopping, and calibrate understanding on a real example.
 
-Start with Domain 1's exact anchor question. Ask one question at a time, adapt follow-ups to my answers, and let me skip or stop. Separate confirmed information from assumptions. Before storing any profile, show me exactly what you'd save, where it would go, and ask for my approval.
+When useful and only with my agreement, follow Stage 2 in protocols/world.md to learn relevant responsibilities, current initiatives, relationships, constraints, and decision history. Stage 3 in protocols/growth.md describes how corrections and outcomes improve context with my permission.
 
-If you cannot access `protocols/discovery.md` through the installed skill, say so plainly and ask me to provide the full protocol. Do not pretend that this short invocation prompt is the protocol itself.
+Separate confirmed facts from interpretations. Before saving anything, preview the change, its scope and location, and request approval. If the playbooks are unavailable, tell me and ask me to provide them; don't pretend this short prompt contains the full protocol.
