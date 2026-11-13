@@ -2,82 +2,105 @@
 
 **AI can only multiply what it understands.**
 
-First Date is an open, portable protocol for helping AI assistants develop a useful, accurate, evolving understanding of the people they work with.
+Your AI may be incredibly capable. But if it doesn't understand how you think, communicate, make decisions, and what matters to you, you're leaving much of that capability untapped.
 
-Most AI interactions begin with a task. First Date begins by making room for the person behind that task.
+**First Date helps your AI get to know you, through a conversation rather than a questionnaire.** No coding required.
+
+## Start your First Date (no installation)
+
+**1.** Open [Claude](https://claude.ai/) or [ChatGPT](https://chatgpt.com/) in a new chat. Other conversational AIs may also work.
+
+**2.** Click the **Copy** icon on the following prompt.
+
+**3.** Paste it into your AI and start talking.
+
+<details open>
+<summary><strong>Copy this prompt to begin</strong></summary>
+
+```text
+You are running First Date, a user-controlled protocol for building a better working relationship between a person and their AI.
+
+Your purpose is not to collect a biography. It's to understand enough about how I think, communicate, make decisions, and what I'm trying to accomplish that you can collaborate with me more effectively.
+
+Make this feel like a real conversation, not an intake form:
+- Start with one thoughtful question about what I want AI to help me accomplish.
+- Ask only one question at a time. Listen and adapt each follow-up to what I actually say.
+- Explore my working style, decision-making, preferred feedback, goals, and boundaries only when relevant.
+- Don't assume that everything I say is a permanent preference. Separate things I've explicitly confirmed from your interpretations.
+- Don't ask for sensitive personal information unless I bring it up and it is genuinely relevant. I can skip any question.
+- Don't claim to know me already or invent facts. If you have existing memory, be transparent about whether you're using it.
+
+When we've established enough useful context, or I ask to stop:
+1. Summarize what you've learned in a concise, editable global context profile, distinguishing confirmed facts from things to verify.
+2. Ask me to correct, remove, or approve that profile.
+3. Before saving anything, tell me where it would be stored, who or what could access it, and whether that storage would persist into future chats.
+4. Save only what I explicitly approve, and only if your platform truly supports the requested storage. Otherwise give me a copyable Markdown profile and instructions for using it.
+5. Never add my private information to a public project or automatically share it with another service.
+
+Start the conversation now. Ask me your first question.
+```
+
+</details>
+
+That's it. **No ZIP files, extensions, account registration, or technical setup.**
+
+### What happens next?
+
+Your AI should ask a question and build on your answer, one step at a time. You can skip anything. When you're ready to finish, ask it to create a context profile you can review and approve.
+
+**Important:** A conversation alone does not guarantee long-term memory. Different AI tools offer different persistence options, and some may not support global context at all. First Date should explain what's available and give you a reusable Markdown profile when it can't save one. Never paste private profiles into this public GitHub repository.
+
+### Already have an AI relationship?
+
+Start a chat and paste:
+
+```text
+Let's do a First Date check-in. Tell me what you currently know about how I think and work, separate confirmed facts from assumptions, and ask one question at a time to fill meaningful gaps. Don't save changes without showing me a proposed update and getting my approval.
+```
+
+This prompt asks for a check-in. If you want the **full check-in procedure** without installing anything, copy the longer instructions in [SKILL.md](SKILL.md) as well.
+
+## What makes it different?
+
+Most AI onboarding focuses on the task. First Date focuses on the person behind the task.
+
+- **Conversational by design.** No giant forms or mandatory questions.
+- **Global context first.** What the AI learns about you should be reusable across relevant work where your AI supports it.
+- **Project-specific context when needed.** Projects should inherit only the minimum approved information.
+- **User-owned and inspectable.** Review, correct, withhold, or export your context.
+- **Evolving, not one-and-done.** Future check-ins help correct stale assumptions and deepen understanding.
 
 > Understand before assuming. Learn without intruding. Remember with permission. Evolve through experience.
 
-## What it does
+## Want the ongoing experience?
 
-- **Introduces you to your AI** through a natural conversation, not a lengthy questionnaire.
-- **Builds global context** about how you prefer to think, communicate, work, and collaborate.
-- **Creates project context** that inherits only relevant, permitted details from your global profile.
-- **Offers optional context clarification** during ordinary work when a significant gap would materially change an answer.
-- **Supports check-ins, audits, corrections, and exports** so context stays accurate and in your control.
+The zero-install prompt starts the conversation. The [full skill](SKILL.md) adds structured workflows for onboarding, project context, check-ins, audits, and exports, plus guidance for optional context clarification during normal collaboration *when your AI platform loads the skill*.
 
-## Try it
+| Approach | Best for | What to expect |
+| --- | --- | --- |
+| **Copy the prompt** | Anyone trying First Date | Immediate introduction; persistence depends on your AI tool |
+| **Install the skill** | People who want repeated use | Host-supported skill invocation and maintenance workflows; storage still depends on the platform |
+| **Use the templates** | People who want full control of their data | Portable Markdown for [global context](templates/global-context.md) and [project context](templates/project-context.md) |
 
-Copy [SKILL.md](SKILL.md) into a supported AI skill location, or paste its instructions into your AI assistant and say:
-
-```text
-Run First Date. I'd like to establish the context that will help us work together.
-```
-
-For an existing relationship:
-
-```text
-Run First Date check-in. Show me what you know, what's inferred, and what needs updating.
-```
-
-For a project:
-
-```text
-Run First Date project. Help me establish context for this workstream.
-```
-
-The exact installation path, automatic skill discovery, and persistence behavior depend on your AI platform. A plain prompt **cannot guarantee** global memory, passive invocation, or cross-session persistence. When those capabilities are unavailable, First Date produces copyable Markdown profiles.
+See the [skill instructions](SKILL.md) for the full protocol. Native slash commands, automatic loading, and global memory **are not guaranteed** across AI platforms.
 
 ## How context is organized
 
-| Layer | Contains | Default boundary |
+| Layer | Contains | Boundary |
 | --- | --- | --- |
-| Global | Durable preferences, explicitly supplied goals, ways of working | Private, user-controlled |
-| Project | Workstream goals, conventions, stakeholders, constraints | Project-scoped; only permitted global context |
-| Session | Immediate goal, temporary decisions, short-lived details | Not promoted without approval |
+| **Global: the person** | Durable communication, decision-making, goals, boundaries | Private and user-controlled |
+| **Project: the work** | Conventions, decisions, objectives, constraints | Inherit only relevant approved global context |
+| **Session: the moment** | Immediate goal and temporary circumstances | Not promoted without permission |
 
-See [global-context template](templates/global-context.md) and [project-context template](templates/project-context.md).
+## For contributors and implementers
 
-## Ways to use it
+- [Protocol specification](SPEC.md)
+- [Full skill](SKILL.md)
+- [Reusable starter prompt](prompts/first-date.txt)
+- [Global profile template](templates/global-context.md)
+- [Project profile template](templates/project-context.md)
+- [Contributing](CONTRIBUTING.md)
 
-| Invocation | Purpose |
-| --- | --- |
-| `first-date` | Conversational introduction |
-| `first-date check-in` | Reconcile and refresh context |
-| `first-date project` | Create or refine a project profile |
-| `first-date audit` | Identify stale, unsupported or overshared context |
-| `first-date export` | Produce an approved, portable profile |
+**Status:** v0.1 early prototype. We're validating the conversational experience and cross-platform behavior. Feedback and real-world testing (without sharing personal profiles) are welcome.
 
-These are **conceptual invocations**, not guaranteed native slash commands on every platform.
-
-## Principles
-
-1. User agency comes first. The assistant supports judgment rather than replacing it.
-2. Help with the task before requesting optional context, whenever possible.
-3. Never infer a lasting personal fact from a single message.
-4. Request explicit approval before writing durable context through this protocol.
-5. Keep private profiles out of public repositories.
-6. Only share the minimum relevant information across context boundaries.
-7. Be transparent about what the host can and cannot remember.
-
-## Project status
-
-**v0.1: early prototype.** The skill and templates are usable as instructions, but cross-platform behavior and storage adapters require validation. See [SPEC.md](SPEC.md) for scope and acceptance criteria.
-
-## Contributing
-
-Feedback, platform adapters, examples, and accessibility improvements are welcome. See [CONTRIBUTING.md](CONTRIBUTING.md).
-
-## License
-
-MIT. See [LICENSE](LICENSE).
+MIT licensed. See [LICENSE](LICENSE).
